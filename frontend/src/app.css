@@ -1,0 +1,77 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    height: var(--header-footer-height);
+    background: var(--dark-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.header__create {
+    margin: 0 auto;
+}
+
+.header__btn {
+    cursor: pointer;
+}
+
+.header__title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header__subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
+    color: #aaa;
+}
+
+.header__author {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* по вертикали */
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer {
+    height: var(--header-footer-height);
+    background: var(--dark-color);
+    color: var(--light-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.footer a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

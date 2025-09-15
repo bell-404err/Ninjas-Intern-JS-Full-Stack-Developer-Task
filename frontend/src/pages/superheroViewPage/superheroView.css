@@ -1,0 +1,114 @@
+.view {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    background: #f4f4f6;
+}
+
+.view__card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 3rem;
+    max-width: 60rem;
+    width: 100%;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.view__card:hover {
+    transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
+    box-shadow: 0 2rem 4rem rgba(0,0,0,0.2);
+}
+
+.view__title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.view__divider {
+    border: none;
+    border-top: 0.1rem solid #ccc;
+    margin: 1rem 0 2rem 0;
+}
+
+.view__image-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.view__image-wrapper {
+    perspective: 800px;
+}
+
+.view__image {
+    width: 25rem;
+    border-radius: 0.6rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view__image:hover {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+    box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.25);
+}
+
+.view__info {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.view__phrase {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(58, 122, 254, 0.1);
+    border-left: 0.3rem solid #3a7afe;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #111;
+}
+
+.view__actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* кнопки */
+.btn {
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn--primary {
+    background: #3a7afe;
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #255bdb;
+}
+
+.btn--danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn--danger:hover {
+    background: #c0392b;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

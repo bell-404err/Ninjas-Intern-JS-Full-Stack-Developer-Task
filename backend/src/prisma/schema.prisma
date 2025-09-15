@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Character {
+  id                String   @id @default(uuid())
+  nickname          String   @unique
+  realName          String   @map("real_name")
+  originDescription String   @map("origin_description")
+  superpowers       String
+  catchPhrase       String   @unique @map("catch_phrase")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  images CharacterImages[]
+}
+
+model CharacterImages {
+  id          String    @id @default(uuid())
+  url         String
+  isCover     Boolean   @default(false) @map("is_cover")
+  order       Int       @default(0) @map("order_index")
+  characterId String    @map("character_id")
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}

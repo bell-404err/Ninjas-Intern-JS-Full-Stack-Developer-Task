@@ -1,0 +1,20 @@
+:root {
+    --light-color: rgba(245, 245, 247, 1);
+    --dark-color: #1f1f1f;
+    --header-footer-height: 10rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
