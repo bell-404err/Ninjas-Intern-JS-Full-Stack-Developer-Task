@@ -39,7 +39,7 @@ Before starting the application, make sure that you:
 
 ### Clone the repository  
 ```
-git clone <repo_url>
+git clone git@github.com:bell-404err/Ninjas-Intern-JS-Full-Stack-Developer-Task.git
 ```
 
 ### Install dependencies
