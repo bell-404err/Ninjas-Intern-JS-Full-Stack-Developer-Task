@@ -40,7 +40,6 @@
     resize: vertical;
 }
 
-/* изображения */
 .edit__images h3 {
     margin-bottom: 1rem;
     font-size: 1.6rem;
@@ -87,7 +86,6 @@
     background: rgba(0,0,0,0.8);
 }
 
-/* загрузка */
 .edit__upload h3 {
     margin-bottom: 1rem;
     font-size: 1.6rem;
@@ -99,7 +97,6 @@
     font-size: 1.4rem;
 }
 
-/* кнопки */
 .edit__actions {
     display: flex;
     justify-content: center;
