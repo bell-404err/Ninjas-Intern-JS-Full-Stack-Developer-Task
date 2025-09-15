@@ -73,6 +73,11 @@ npm run start
 npm run start
 ```
 
+## Notes:
+
+**The backend/public/uploads folder is intentionally not included in .gitignore, as it is part of the database seed.
+This ensures the application is fully ready to use out of the box.**
+
 ## Screenshots
 ### Home page
 <img src="docs/home.png" width="1280"/>
