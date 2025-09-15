@@ -9,15 +9,12 @@ class SuperheroController {
       const page = +req.query.page || 1;
       const limit = +req.query.limit || 5;
 
-      const charactersList = await SuperheroService.getAll();
+      if (page < 0 || limit < 1 || limit > 20) {
+        return next(createError(404, `Request limit exceeded`));
+      }
 
-      const start = (page - 1) * limit;
-      const end = start + limit;
-
-      const slicedCharactersList = charactersList.slice(start, end);
-
-      return res.json(slicedCharactersList);
-
+      const charactersList = await SuperheroService.getAll(page, limit);
+      return res.json(charactersList);
     } catch (e) {
       console.error(e);
       return next(createError(500, 'Internal server error'));

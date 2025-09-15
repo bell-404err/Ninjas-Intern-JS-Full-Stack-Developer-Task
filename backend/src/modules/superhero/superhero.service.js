@@ -1,11 +1,15 @@
 import prismaClient from '../../prisma/prismaClient.js'
 
 class SuperheroService {
-  async getAll() {
+  async getAll(page = 1, limit = 5) {
+    const skip = (page - 1) * limit;
     return prismaClient.character.findMany({
+      skip,
+      take: limit,
       include: {
         images: true,
       },
+      orderBy: { createdAt: 'desc' },
     });
   }
 
